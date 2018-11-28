@@ -1,0 +1,45 @@
+# -*- encoding: UTF-8 -*-
+
+
+# 行情设置
+Market:
+  # str 行情数据类型，TICK/BAR，默认为 TICK
+  type: TICK
+  # int 行情数据时间间隔，单位毫秒，默认为 100
+  microseconds: 100
+
+
+# 撮合设置
+Matching: ~
+  # bool 近涨跌停点是否撮合，默认为 True
+  updown_price_limit: true
+
+
+# Redis 接口
+Redis:
+  # str 主机地址
+  host: localhost
+  # int 端口号，默认为 6379
+  port: 6379
+  # int 数据库编号，默认为 0
+  db: 0
+  # str 接入密码，默认为无
+  password: ~
+
+
+# 计时器发生器
+Timer:
+  # int 计时器时间间隔，默认为 1000
+  microseconds: 1000
+
+
+# 日志设置
+Log:
+  # str 文件日志级别，由低到高 debug/info/warn/error/critical，默认为 info
+  level: debug
+  # str 文件日志储存相对路径，默认为 log
+  path: log
+  # bool 是否在 python console 中显示log，默认为 false
+  console_print: true
+  # bool 是否保持之前运行的日志文件，默认为 false
+  keep_history: true
